@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Wire Center</title>
+<link rel="icon" type="image/x-icon" href="icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #78221c;
+  color: yellow;
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div><img src="logo.png" height="150" alt="me"></div>
+  <p>Electronic Repair and Refurbishing</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="https://www.ebay.com/usr/wirecentertech">Ebay</a>
+  <a href="repair.html">Repair</a>
+  <a href="products.html">Products</a>
+  <a href="custom.html">Custom 3D Printing and Circuits</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe93SaWFwZMFUqJ09Y_miRy42Q_QGjQ_vFSvPCMTSs8CodJUw/viewform?pli=1&pli=1">Contact Form</a>
+  <a href="https://docs.google.com/document/d/e/2PACX-1vS8GPwNrPgf0dBurKLfoVP0ZSjepjO5Q3CQ7wEYvfVM5yaM7oc-stbL5EhfXm7E9WFwdRT7anZah0Zb/pub" class="right">Updates</a>
+</div>
+
+<div class="row">
+  <form action="repair_form_info.php">
+  <label for="fname">Name:</label><br>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Item:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="desc">Short Description:</label><br>
+  <input type="text" id="desc" name="desc"><br><br>
+  <label for="check">Urgent?:</label>
+  <input type="checkbox" value="check"><br><br>
+  <input type="submit" value="Submit">
+  </form>
+</div>
+
+<div class="footer">
+  <h2>© 2024</h2>
+</div>
+
+</body>
+</html>
